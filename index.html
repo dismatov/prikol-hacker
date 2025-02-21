@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefoningiz kuzatuv ostida! 😱</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            font-size: 18px;
+            padding: 20px;
+        }
+        #output {
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        const messages = [
+            "📡 Telefoningizga ulanish...",
+            "🔍 Kamera faollashmoqda...",
+            "📂 Galereya skanerlash...",
+            "📨 Telegram yozishmalarini ochish...",
+            "🧾 Click va Payme hisoblarini tekshirish...",
+            "⚠️ OG'OH BO'LING! Telefoningiz nazorat ostida! 😱",
+            "😂 Xatolik! Telefonizda faqat TikTok va 1 ta darslik bor! 😂"
+        ];
+
+        let index = 0;
+        function showMessage() {
+            if (index < messages.length) {
+                document.getElementById("output").innerHTML += messages[index] + "<br>";
+                index++;
+                setTimeout(showMessage, 2000);
+            }
+        }
+
+        showMessage();
+    </script>
+</body>
+</html>
